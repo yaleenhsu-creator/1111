@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>履歷表</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 320px;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.info {
+    color: #555;
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <img src="images/photo.jpg" alt="個人照片" class="profile-img">
+
+        <h1 id="name">許某某</h1>
+        <p class="info">亞洲大學學生</p>
+        <p class="info">學號：AU114018016</p>
+        <p class="info">Email：yaleen.hsu@gmail.com</p>
+
+        <button onclick="showMessage()">點我</button>
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    alert("你好！這是許某某的履歷表！");
+}
+</script>
+
+</body>
+</html>
