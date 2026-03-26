@@ -11,19 +11,17 @@ body {
     background: #eef1f5;
 }
 
-/* 外框 */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 30px;
 }
 
 /* 主卡片 */
 .card {
     display: flex;
-    width: 700px;
-    height: 420px;
+    width: 800px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -31,7 +29,7 @@ body {
 
 /* 左側 */
 .left {
-    width: 40%;
+    width: 35%;
     background: linear-gradient(135deg, #ff7e7e, #ffb199);
     color: white;
     text-align: center;
@@ -51,25 +49,60 @@ body {
     margin: 10px 0;
 }
 
+.section-title {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.small-text {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 /* 右側 */
 .right {
-    width: 60%;
+    width: 65%;
     background: white;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .info {
-    margin: 8px 0;
+    margin: 6px 0;
     color: #444;
-    font-size: 16px;
+    font-size: 15px;
+}
+
+/* 區塊 */
+.block {
+    margin-bottom: 20px;
+}
+
+.block h3 {
+    margin-bottom: 8px;
+    color: #6c63ff;
+}
+
+/* 技能條 */
+.skill {
+    margin: 5px 0;
+}
+
+.skill-bar {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-bar div {
+    height: 100%;
+    background: #6c63ff;
 }
 
 /* 按鈕 */
 button {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px;
     border: none;
     background: #6c63ff;
@@ -81,7 +114,6 @@ button {
 
 button:hover {
     background: #574fd6;
-    transform: scale(1.05);
 }
 </style>
 
@@ -95,15 +127,48 @@ button:hover {
         <div class="left">
             <img src="images/photo.jpg" alt="個人照片" class="profile-img">
             <h1 id="name">許某某</h1>
+
+            <div class="section-title">聯絡資訊</div>
+            <div class="small-text">亞洲大學學生</div>
+            <div class="small-text">學號：AU114018016</div>
+            <div class="small-text">Email：yaleen.hsu@gmail.com</div>
+
+            <div class="section-title">興趣</div>
+            <div class="small-text">🎵 音樂 / 🎨 藝術 / 🏀 運動</div>
         </div>
 
         <!-- 右側 -->
         <div class="right">
-            <p class="info">亞洲大學學生</p>
-            <p class="info">學號：AU114018016</p>
-            <p class="info">Email：yaleen.hsu@gmail.com</p>
+
+            <div class="block">
+                <h3>自我介紹</h3>
+                <p class="info">
+                    我是亞洲大學的學生，目前專注於專業學習與自我成長。
+                    個性認真負責，善於溝通與團隊合作，期望未來能在專業領域中持續發展。
+                </p>
+            </div>
+
+            <div class="block">
+                <h3>技能</h3>
+
+                <div class="skill">
+                    HTML / CSS
+                    <div class="skill-bar"><div style="width: 75%"></div></div>
+                </div>
+
+                <div class="skill">
+                    溝通能力
+                    <div class="skill-bar"><div style="width: 85%"></div></div>
+                </div>
+
+                <div class="skill">
+                    團隊合作
+                    <div class="skill-bar"><div style="width: 80%"></div></div>
+                </div>
+            </div>
 
             <button onclick="showMessage()">點我</button>
+
         </div>
 
     </div>
