@@ -119,10 +119,7 @@ button:hover {
         <div class="left">
             <img src="images/photo.jpg" class="profile-img">
 
-            <audio controls>
-  <source src="mp3/bg.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio
+          
             <h1>許某某</h1>
 
             <div class="section-title">聯絡資訊</div>
@@ -190,6 +187,23 @@ function showMessage() {
     alert("你好！這是許某某的履歷表！");
 }
 </script>
+<audio id="bgm" autoplay loop playsinline>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+  const audio = document.getElementById("bgm");
+
+  // 嘗試直接播放
+  audio.play().catch(() => {
+    // 若被擋，快速解除靜音再播放
+    audio.muted = true;
+    audio.play();
+
+    setTimeout(() => {
+      audio.muted = false;
+    }, 100);
+  });
+</script>
 </body>
 </html>
